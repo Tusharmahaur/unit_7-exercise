@@ -792,10 +792,221 @@
 // }
 
 //user defined matrix size and user defined matrix input
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-    int main(){
+// int main(){
+//     int m,n;
+//     cout<<"Enter the size of matrix row and column : ";
+//     cin>>m>>n;
+//     int **matrix1;
+//     int **matrix2;
+//     //dynamic memory allocation for matrix 1
+//     matrix1 = new int*[m];
+//     for(int i=0;i<m;i++){
+//         matrix1[i] = new int[n];
+//     }
+//     //dynamic memory allocation for matrix 2
+//     matrix2 = new int*[m];
+//     for(int i=0;i<m;i++){
+//         matrix2[i] = new int[n];
+//     }
 
-    return 0;
-}
+//     //inputting matrix 1
+//     cout<<"------------Inputting for matrix1-----------------"<<endl;
+//     for(int i= 0; i<m;i++){
+//         for(int j = 0;j<n;j++){
+//             cin>>matrix1[i][j];
+//         }
+//     }
+//     //inputting matrix 2
+//     cout<<"------------Inputting for matrix2-----------------"<<endl;
+//     for(int i= 0; i<m;i++){
+//         for(int j = 0;j<n;j++){
+//             cin>>matrix2[i][j];
+//         }
+//     }
+
+//     //outputting matrix 1
+//     cout<<"---------------outputting for matrix 1-------------------"<<endl;
+//     for(int i = 0;i<m;i++){
+//         for(int j=0;j<n;j++){
+//             cout<<matrix1[i][j]<<" ";
+//         }
+//         cout<<endl;
+//     }
+
+//     //outputting matrix 2
+//     cout<<"-------------outputting for Matrix 2--------------------"<<endl;
+//     for(int i = 0;i<m;i++){
+//         for(int j=0;j<n;j++){
+//             cout<<matrix2[i][j]<<" ";
+//         }
+//         cout<<endl;
+//     }
+//     //adding two matrix
+//     cout<<"----------------Adding the two matrix--------------------"<<endl;
+//     for(int i = 0; i<m; i++){
+//         for(int j = 0; j<n; j++){
+//             cout<<matrix1[i][j] + matrix2[i][j]<<" ";
+//         }
+//         cout<<endl;
+//     }
+
+//     return 0;
+// }
+
+//default parameter matrix subtraction
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     int matrix1[2][2] = {{3,5},{7,8}};
+//     int matrix2[2][2] = {{4,6},{3,7}};
+
+//     //for outputting matix 1
+//     cout<<"------------------Outputting for matrix1------------------"<<endl;
+//     for(int i= 0; i<2;i++){
+//         for(int j=0;j<2;j++){
+//             cout<<matrix1[i][j]<<" ";
+//         }
+//         cout<<endl;
+//     }
+//     //for outputting matix 2
+//     cout<<"------------------Outputting for matrix2------------------"<<endl;
+//     for(int i= 0; i<2;i++){
+//         for(int j=0;j<2;j++){
+//             cout<<matrix2[i][j]<<" ";
+//         }
+//         cout<<endl;
+//     }
+
+//     //for subtracting 
+//     cout<<"--------------------After subtraction--------------------"<<endl;
+//     for(int i=0;i<2;i++){
+//         for(int j=0;j<2;j++){
+//             cout<<matrix1[i][j] - matrix2[i][j]<<" ";
+
+//         }
+//         cout<<endl;
+//     }
+
+//     return 0;
+// }
+
+//subtraction for user defined element matrix
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     int matrix1[2][2];
+//     int matrix2[2][2];
+
+//     //for inputting matrix1
+//     cout<<"---------------inputting for matrix1----------------"<<endl;
+//     for(int i=0; i<2;i++){
+//         for(int j=0;j<2;j++){
+//             cin>>matrix1[i][j];
+//         }
+//     }
+
+//     //for inputting matrix2
+//     cout<<"---------------inputting for matrix2----------------"<<endl;
+//     for(int i=0; i<2;i++){
+//         for(int j=0;j<2;j++){
+//             cin>>matrix2[i][j];
+//         }
+//     }
+
+//     //for outputting matix 1
+//     cout<<"------------------Outputting for matrix1------------------"<<endl;
+//     for(int i= 0; i<2;i++){
+//         for(int j=0;j<2;j++){
+//             cout<<matrix1[i][j]<<" ";
+//         }
+//         cout<<endl;
+//     }
+//     //for outputting matix 2
+//     cout<<"------------------Outputting for matrix2------------------"<<endl;
+//     for(int i= 0; i<2;i++){
+//         for(int j=0;j<2;j++){
+//             cout<<matrix2[i][j]<<" ";
+//         }
+//         cout<<endl;
+//     }
+
+//     //for subtracting 
+//     cout<<"--------------------After subtraction--------------------"<<endl;
+//     for(int i=0;i<2;i++){
+//         for(int j=0;j<2;j++){
+//             cout<<matrix1[i][j] - matrix2[i][j]<<" ";
+
+//         }
+//         cout<<endl;
+//     }
+
+//     return 0;
+// }
+
+//user defined sized and user defined element filling matrix
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     int m,n;
+//     cout<<"Enter the row and column : ";
+//     cin>>m>>n;
+//     int **matrix1;
+//     int **matrix2;
+    
+//     matrix1 = new int*[m];
+//     for(int i =0; i<m;i++){
+//         matrix1[i] = new int[n];
+//     }
+//     //inputting for matrix1
+//     cout<<"------------------inputting matrix1--------------------"<<endl;
+//     for(int i=0;i<m;i++){
+//         for(int j=0;j<n;j++){
+//             cin>>matrix1[i][j];
+//         }
+//     }
+//     //dynamic declaration
+//     matrix2 = new int*[m];
+//     for(int i =0; i<m;i++){
+//         matrix2[i] = new int[n];
+//     }
+//     //inputting for matrix2
+//     cout<<"------------------inputting matrix2---------------------"<<endl;
+//     for(int i=0;i<m;i++){
+//         for(int j=0; j<n; j++){
+//             cin>>matrix2[i][j];
+//         }
+//     }
+
+//     cout<<"---------------outputting matrix1---------------------"<<endl;
+//     for(int i =0;i<m;i++){
+//         for(int j = 0; j<n;j++){
+//             cout<<matrix1[i][j]<<" ";
+//         }
+//         cout<<endl;
+//     }
+
+//     cout<<"-----------------outputting matrix2-------------------"<<endl;
+//     for(int i=0; i<m ; i++){
+//         for(int j=0; j<n; j++){
+//             cout<<matrix2[i][j]<<" ";
+//         }
+//         cout<<endl;
+//     }
+    
+//     cout<<"----------------Subtraction for the matrix------------------"<<endl;
+//     for(int i=0;i<m;i++){
+//         for(int j=0;j<n;j++){
+//             cout<<matrix1[i][j]-matrix2[i][j]<<" ";
+//         }
+//         cout<<endl;
+//     }
+
+//     return 0;
+// }
+
