@@ -141,49 +141,271 @@
 // }
 
 //add time 
+// #include <iostream>
+// using namespace std;
+
+// class Time{
+//     private:
+//     int hours,minutes,seconds;
+//     public:
+//         Time(){
+//             cout<<"Enter the hours : ";
+//             cin>>hours;
+//             cout<<"Enter the minutes : ";
+//             cin>>minutes;
+//             cout<<"Enter the seconds : ";
+//             cin>>seconds;
+    
+//         }
+//         Time add(Time);
+//         void display(void);
+// };
+
+// Time Time::add(Time t){
+//     Time temp;
+//     temp.seconds = seconds + t.seconds;
+//     temp.minutes = minutes + t.minutes + temp.seconds/60;
+//     temp.hours = hours + t.hours + temp.minutes/60;
+//     temp.minutes = temp.minutes % 60;
+//     temp.seconds = temp.seconds % 60;
+//     return temp;
+// }
+
+// void Time::display(void){
+//     cout<<hours<<" hours "<<minutes<<" minutes "<<seconds<<" seconds "<<endl;
+// }
+
+// int main(){
+//     Time t1;
+//     Time t2;
+//     Time t3 = t1.add(t2);
+//     cout<<"Time 1 : ";
+//     t1.display();
+//     cout<<"Time 2 : ";
+//     t2.display();
+//     cout<<"Added Time : ";
+//     t3.display();
+//     return 0;
+// }
+
+// //using friend function to add time
+// #include <iostream>
+// using namespace std;
+// class Time{
+//     private:
+//     int hours,minutes,seconds;
+//     public:
+//         Time(){
+//             cout<<"Enter the hours : ";
+//             cin>>hours;
+//             cout<<"Enter the minutes : ";
+//             cin>>minutes;
+//             cout<<"Enter the seconds : ";
+//             cin>>seconds;
+    
+//         }
+//         void display(void);
+//         friend Time add(Time,Time);
+// };
+// Time add(Time t1,Time t2){
+//     Time temp;
+//     temp.seconds = t1.seconds + t2.seconds;
+//     temp.minutes = t1.minutes + t2.minutes + temp.seconds/60;
+//     temp.hours = t1.hours + t2.hours + temp.minutes/60;
+//     temp.minutes = temp.minutes % 60;
+//     temp.seconds = temp.seconds % 60;
+//     return temp;
+// }
+// void Time::display(void){
+//     cout<<hours<<" hours "<<minutes<<" minutes "<<seconds<<" seconds "<<endl;
+// }
+
+// int main(){
+//     Time t1;
+//     Time t2;
+//     Time t3 = add(t1,t2);
+//     cout<<"Time 1 : ";
+//     t1.display();
+//     cout<<"Time 2 : ";
+//     t2.display();
+//     cout<<"Added Time : ";
+//     t3.display();
+//     return 0;
+// }
+
+// //using constructor with parameters to add time
+// #include <iostream>
+// using namespace std;
+
+// class Time{
+//     private:
+//     int hours,minutes,seconds;
+//     public:
+//         Time(int h, int m, int s){
+//             hours = h;
+//             minutes = m;
+//             seconds = s;
+//         }
+//         Time add(Time);
+//         void display(void);
+// };
+// Time Time::add(Time t){
+//     Time temp(0,0,0);
+//     temp.seconds = seconds + t.seconds;
+//     temp.minutes = minutes + t.minutes + temp.seconds/60;
+//     temp.hours = hours + t.hours + temp.minutes/60;
+//     temp.minutes = temp.minutes % 60;
+//     temp.seconds = temp.seconds % 60;
+//     return temp;
+// }
+// void Time::display(void){
+//     cout<<hours<<" hours "<<minutes<<" minutes "<<seconds<<" seconds "<<endl;
+// }
+// int main(){
+//     Time t1(2,45,50);
+//     Time t2(3,20,30);
+//     Time t3 = t1.add(t2);
+//     cout<<"Time 1 : ";
+//     t1.display();
+//     cout<<"Time 2 : ";
+//     t2.display();
+//     cout<<"Added Time : ";
+//     t3.display();
+//     return 0;
+// }
+
+
+// #include <iostream>
+// using namespace std;
+
+// class FLOAT{
+//     private :
+//         float data1,data2;
+//     public :
+//         FLOAT(float data1, float data2){
+//             this ->data1 = data1;
+//             this ->data2 = data2;
+//         }
+
+//         FLOAT operator+(FLOAT);
+//         void displayAdd(void);
+//         FLOAT operator-(FLOAT);
+//         void displaySub(void);
+//         FLOAT operator*(FLOAT);
+//         void displayMul(void);
+//         FLOAT operator/(FLOAT);
+//         void displayDiv(void);
+// };
+
+// FLOAT FLOAT::operator+(FLOAT f){
+//     FLOAT temp(0,0);
+//     temp.data1 = data1 + f.data1;
+//     temp.data2 = data2 + f.data2;
+//     return temp;
+// }
+
+// void FLOAT::displayAdd(void){
+//     cout<<"Addition of two float number is : "<<data1<<" + "<<data2<<endl;
+// }
+
+// FLOAT FLOAT::operator-(FLOAT f){
+//     FLOAT temp(0,0);//declaration for temporary object otherwise they take garbage value
+//     temp.data1 = data1 - f.data1;
+//     temp.data2 = data2 - f.data2;
+//     return temp;
+// }
+// void FLOAT::displaySub(void){
+//     cout<<"Subtraction of two float number is : "<<data1<<" + "<<data2<<endl;
+// }
+
+// FLOAT FLOAT::operator*(FLOAT f){
+//     FLOAT temp(0,0);
+//     temp.data1 = data1 * f.data1;
+//     temp.data2 = data2 * f.data2;
+//     return temp;
+// }
+
+// void FLOAT::displayMul(void){
+//     cout<<"Multiplication of two float number is : "<<data1<<" + "<<data2<<endl;
+// }
+
+// FLOAT FLOAT::operator/(FLOAT f){
+//     FLOAT temp(0,0);
+//     temp.data1 = data1 / f.data1;
+//     temp.data2 = data2 / f.data2;
+//     return temp;
+// }
+
+// void FLOAT::displayDiv(void){
+//     cout<<"Division of two float number is : "<<data1<<" + "<<data2<<endl;
+// }
+
+// int main(){
+//     FLOAT f1(10.5,20.5);
+//     FLOAT f2(2.5,5.5);
+//     FLOAT f3(0,0);
+
+//     f3 = f1 + f2;
+//     f3.displayAdd();
+
+//     f3 = f1 - f2;
+//     f3.displaySub();
+
+//     f3 = f1 * f2;
+//     f3.displayMul();
+
+//     f3 = f1 / f2;
+//     f3.displayDiv();
+
+//     return 0;
+// }
+
 #include <iostream>
 using namespace std;
 
-class Time{
+class Distance{
     private:
-    int hours,minutes,seconds;
+        int feet,inches;
     public:
-        Time(){
-            cout<<"Enter the hours : ";
-            cin>>hours;
-            cout<<"Enter the minutes : ";
-            cin>>minutes;
-            cout<<"Enter the seconds : ";
-            cin>>seconds;
-    
+        void getInfo(void){
+            feet = 0;
+            inches = 0;
+            cout<<"Enter the feet = ";
+            cin>>feet;
+            cout<<"Enter the inches = ";
+            cin>>inches;
         }
-        Time add(Time);
+        
+        Distance operator+(Distance);
         void display(void);
 };
 
-Time Time::add(Time t){
-    Time temp;
-    temp.seconds = seconds + t.seconds;
-    temp.minutes = minutes + t.minutes + temp.seconds/60;
-    temp.hours = hours + t.hours + temp.minutes/60;
-    temp.minutes = temp.minutes % 60;
-    temp.seconds = temp.seconds % 60;
+Distance Distance::operator+(Distance d){
+    Distance temp;
+    temp.inches = inches + d.inches;
+    temp.feet = feet + d.feet + temp.inches/12;
+    temp.inches = temp.inches % 12;
     return temp;
 }
 
-void Time::display(void){
-    cout<<hours<<" hours "<<minutes<<" minutes "<<seconds<<" seconds "<<endl;
+void Distance::display(void){
+    cout<<feet<<" feet "<<inches<<" inches "<<endl;
+
 }
 
 int main(){
-    Time t1;
-    Time t2;
-    Time t3 = t1.add(t2);
-    cout<<"Time 1 : ";
-    t1.display();
-    cout<<"Time 2 : ";
-    t2.display();
-    cout<<"Added Time : ";
-    t3.display();
+    Distance d1;
+    cout<<"Distance 1 :-----> "<<endl;
+    d1.getInfo();
+    d1.display();
+    cout<<"\nDistance 2 :-----> "<<endl;
+    Distance d2;
+    d2.getInfo();
+    d2.display();
+    cout<<"Added Distance : ";
+    Distance d3;
+    d3 = d1 + d2;
+    d3.display();
+
     return 0;
 }
