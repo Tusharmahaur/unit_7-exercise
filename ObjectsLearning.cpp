@@ -1010,3 +1010,40 @@
 //     return 0;
 // }
 
+//default parameter multiply default element
+// #include <iostream>
+// using namespace std;
+// int main(){
+//     int matrix1[2][2] = {{3,5},{6,2}};
+//     int matrix2[2][2] = {{2,6},{2,4}};
+
+//     cout<<"---------------For matrix1 Display---------------"<<endl;
+//     for(int i=0;i<2;i++){
+//         for(int j=0;j<2;j++){
+//             cout<<matrix1[i][j]<<" ";
+//         }
+//         cout<<endl;
+//     }
+
+//     cout<<"---------------For matrix2 Display---------------"<<endl;
+//     for(int i=0;i<2;i++){
+//         for(int j=0;j<2;j++){
+//             cout<<matrix2[i][j]<<" ";
+//         }
+//         cout<<endl;
+//     }
+
+//     cout<<"--------------After Multiplyication--------------"<<endl;
+//     for(int i=0; i<2; i++){
+//         for(int j=0; j<2; j++){
+//             int temp1 = matrix1[i][j]*matrix2[i][j];
+//             int temp2 = matrix1[i][j+1]*matrix2[i+1][j];
+//             int result = temp1+temp2;
+//             cout<<result<<" ";
+//         }
+//         cout<<endl;
+//     }
+//     return 0;
+// }
+
+//multiply two matrix 
