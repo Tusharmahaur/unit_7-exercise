@@ -504,3 +504,189 @@
 
 //     return 0;
 // }
+
+//polar class to add two polar number using member function
+// #include <iostream>
+// #include <cmath>
+// using namespace std;
+
+// class Polar{
+//     private:
+//         float radius,angle;
+//     public:
+//         void getInfo(){
+//             radius = 0;
+//             angle = 0;
+//             cout<<"Enter the radius = ";
+//             cin>>radius;
+//             cout<<"Enter the angle (in degrees) = ";
+//             cin>>angle;
+//         }
+
+//         friend Polar add(Polar,Polar);
+//         void display(void);
+
+// };
+
+// Polar add(Polar p1,Polar p2){
+//     Polar temp;
+//     float x1,y1,x2,y2,x3,y3;
+//     x1 = p1.radius * cos(p1.angle * M_PI / 180);
+//     y1 = p1.radius * sin(p1.angle * M_PI / 180);
+//     x2 = p2.radius * cos(p2.angle * M_PI / 180);
+//     y2 = p2.radius * sin(p2.angle * M_PI / 180);
+//     x3 = x1 + x2;
+//     y3 = y1 + y2;
+//     temp.radius = sqrt(x3*x3 + y3*y3);
+//     temp.angle = atan2(y3,x3) * 180 / M_PI;
+//     return temp;
+// }
+
+// void Polar::display(void){
+//     cout<<"Radius = "<<radius<<", Angle = "<<angle<<" degrees"<<endl;
+// }
+
+// int main(){
+//     Polar p1;
+//     cout<<"Polar Number 1 :-----> "<<endl;
+//     p1.getInfo();
+//     p1.display();
+//     cout<<"\nPolar Number 2 :-----> "<<endl;
+//     Polar p2;
+//     p2.getInfo();
+//     p2.display();
+//     cout<<"\nAdded Polar Number : ";
+//     Polar p3;
+//     p3 = add(p1,p2);
+//     p3.display();
+
+//     return 0;
+// }
+
+//Creat a class MAT of size matrix operations for all possible MAT operations using operator overloading 
+// #include <iostream>
+// using namespace std;
+
+// class Mat{
+//     private:
+//         int m,n;
+//         int **mat;
+//     public:
+//         Mat(int m, int n);//
+//         void getInfo(void);
+//         void display(void);
+//         Mat operator+(Mat);
+// };
+
+// Mat::Mat(int m, int n){
+//     this ->m = m;
+//     this ->n = n;
+//     mat = new int*[m];
+//     for(int i=0;i<m;i++){
+//         mat[i] = new int[n];
+//     }
+// }
+
+// void Mat::getInfo(void){
+//     cout<<"Enter the elements of matrix "<<m<<"x"<<n<<endl;
+//     for(int i=0;i<m;i++){
+//         for(int j=0;j<n;j++){
+//             cin>>mat[i][j];
+//         }
+//     }
+// }
+
+// void Mat::display(void){
+//     cout<<"Matrix "<<m<<"x"<<n<<" is : "<<endl;
+//     for(int i=0;i<m;i++){
+//         for(int j=0;j<n;j++){
+//             cout<<mat[i][j]<<" ";
+//         }
+//         cout<<endl;
+//     }
+// }
+
+// Mat Mat::operator+(Mat mat2){
+//     Mat temp(m,n);
+//     for(int i=0;i<m;i++){
+//         for(int j=0;j<n;j++){
+//             temp.mat[i][j] = mat[i][j] + mat2.mat[i][j];
+//         }
+//     }
+//     return temp;
+// }
+
+// int main(){
+//     int m,n;
+//     cout<<"Enter the number of columns and rows of matrix : ";
+//     cin>>m>>n;
+//     Mat mat1(m,n);
+//     mat1.getInfo();
+//     mat1.display();
+//     Mat mat2(m,n);
+//     mat2.getInfo();
+//     mat2.display();
+//     Mat mat3(m,n);
+//     mat3 = mat1 + mat2;
+//     cout<<"Added Matrix is : "<<endl;
+//     mat3.display();
+
+//     return 0;
+// }
+
+//for understanding display the matrix 
+// #include <iostream>
+// using namespace std;
+
+// class Matrix{
+//     private:
+//         int m,n;
+//         int **mat;
+//     public:
+//         Matrix(int m,int n);
+// }
+
+// Matrix::Matrix(int m,int n){
+//     this ->m = m;
+//     this ->n = n;
+    
+// }
+
+// int main(){
+//     int m,n;
+//     cout<<"Enter the size of matrix row*column : ";
+//     cin>>m>>n;
+//     Matrix obj;
+
+// }
+
+//display matrix using dynamic memory allocation
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// int main(){
+//     int m,n;
+//     cout<<"Enter the size of matrix row*column : ";
+//     cin>>m>>n;
+//     string **mat;
+//     mat = new string*[m];
+//     for(int i=0;i<m;i++){
+//         mat[i] = new string [n];
+//     }
+
+//     cout<<"Enter the elements of matrix "<<m<<"x"<<n<<endl;
+//     for(int i=0;i<m;i++){
+//         for(int j=0;j<n;j++){
+//             cin>>mat[i][j];
+//         }
+//     }
+//     cout<<"Matrix "<<m<<"x"<<n<<" is : "<<endl;
+//     for(int i=0;i<m;i++){
+//         for(int j=0;j<n;j++){
+//             cout<<mat[i][j]<<" ";
+//         }
+//         cout<<endl;
+//     }
+//     return 0;
+// }
