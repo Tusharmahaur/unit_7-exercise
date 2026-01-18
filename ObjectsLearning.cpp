@@ -360,52 +360,147 @@
 //     return 0;
 // }
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-class Distance{
-    private:
-        int feet,inches;
-    public:
-        void getInfo(void){
-            feet = 0;
-            inches = 0;
-            cout<<"Enter the feet = ";
-            cin>>feet;
-            cout<<"Enter the inches = ";
-            cin>>inches;
-        }
+// class Distance{
+//     private:
+//         int feet,inches;
+//     public:
+//         void getInfo(void){
+//             feet = 0;
+//             inches = 0;
+//             cout<<"Enter the feet = ";
+//             cin>>feet;
+//             cout<<"Enter the inches = ";
+//             cin>>inches;
+//         }
         
-        Distance operator+(Distance);
-        void display(void);
-};
+//         Distance operator+(Distance);
+//         void display(void);
+// };
 
-Distance Distance::operator+(Distance d){
-    Distance temp;
-    temp.inches = inches + d.inches;
-    temp.feet = feet + d.feet + temp.inches/12;
-    temp.inches = temp.inches % 12;
-    return temp;
-}
+// Distance Distance::operator+(Distance d){
+//     Distance temp;
+//     temp.inches = inches + d.inches;
+//     temp.feet = feet + d.feet + temp.inches/12;
+//     temp.inches = temp.inches % 12;
+//     return temp;
+// }
 
-void Distance::display(void){
-    cout<<feet<<" feet "<<inches<<" inches "<<endl;
+// void Distance::display(void){
+//     cout<<feet<<" feet "<<inches<<" inches "<<endl;
 
-}
+// }
 
-int main(){
-    Distance d1;
-    cout<<"Distance 1 :-----> "<<endl;
-    d1.getInfo();
-    d1.display();
-    cout<<"\nDistance 2 :-----> "<<endl;
-    Distance d2;
-    d2.getInfo();
-    d2.display();
-    cout<<"Added Distance : ";
-    Distance d3;
-    d3 = d1 + d2;
-    d3.display();
+// int main(){
+//     Distance d1;
+//     cout<<"Distance 1 :-----> "<<endl;
+//     d1.getInfo();
+//     d1.display();
+//     cout<<"\nDistance 2 :-----> "<<endl;
+//     Distance d2;
+//     d2.getInfo();
+//     d2.display();
+//     cout<<"Added Distance : ";
+//     Distance d3;
+//     d3 = d1 + d2;
+//     d3.display();
 
-    return 0;
-}
+//     return 0;
+// }
+
+// //add weight using member function
+// #include <iostream>
+// using namespace std;
+
+// class Weight{
+//     int kg,grams;
+//     public:
+//         void getInfo(void){
+//             kg = 0;
+//             grams = 0;
+//             cout<<"Enter the kilogram = ";
+//             cin>>kg;
+//             cout<<"Enter the grams = ";
+//             cin>>grams;
+//         }
+
+//         Weight add(Weight);
+//         void display(void);
+// };
+
+// Weight Weight::add(Weight w){
+//     Weight temp;
+//     temp.grams = grams + w.grams;
+//     temp.kg = kg + w.kg + temp.grams/1000;
+//     temp.grams = temp.grams % 1000;
+//     return temp;
+// }
+
+// void Weight::display(void){
+//     cout<<kg<<" killograms "<<grams<<" grams "<<endl;
+// }
+
+// int main(){
+//     Weight w1;
+//     cout<<"Weight 1 :-----> "<<endl;
+//     w1.getInfo();
+//     w1.display();
+//     cout<<"\nWeight 2 :-----> "<<endl;
+//     Weight w2;
+//     w2.getInfo();
+//     w2.display();
+//     cout<<"\nAdded Weight : ";
+//     Weight w3;
+//     w3 = w1.add(w2);
+//     w3.display();
+
+//     return 0;
+// }
+
+//add weight using friend function
+// #include <iostream>
+// using namespace std;
+
+// class Weight{
+//     int kg,grams;
+//     public:
+//         void getInfo(void){
+//             kg = 0;
+//             grams = 0;
+//             cout<<"Enter the kilogram = ";
+//             cin>>kg;
+//             cout<<"Enter the grams = ";
+//             cin>>grams;
+//         }
+//         friend Weight add(Weight,Weight);
+//         void display(void){
+//             cout<<kg<<" killograms "<<grams<<" grams "<<endl;
+//         }
+// };
+
+// Weight add(Weight w1,Weight w2){
+//     Weight temp;
+//     temp.grams = w1.grams + w2.grams;
+//     temp.kg = w1.kg + w2.kg + temp.grams/1000;
+//     temp.grams = temp.grams % 1000;
+//     return temp;
+// }
+
+// int main(){
+//     Weight w1;
+//     cout<<"Weight 1 :-----> "<<endl;
+//     w1.getInfo();
+//     w1.display();
+//     cout<<"\nWeight 2 :-----> "<<endl;
+//     Weight w2;
+//     w2.getInfo();
+//     w2.display();
+//     cout<<"\nAdded Weight : ";
+//     Weight w3;
+//     w3 = add(w1,w2);
+//     w3.display();
+
+//     return 0;
+// }
